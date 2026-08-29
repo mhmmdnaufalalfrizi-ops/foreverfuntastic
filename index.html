@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foncy Funtastic — Beranda</title>
+
+<!--
+  ====================================================================
+  CARA PAKAI SINGKAT (baca ini dulu!)
+  ====================================================================
+  Website ini sekarang multi-halaman (bukan satu halaman scroll):
+    index.html       -> Beranda
+    tentang.html     -> Tentang
+    galeri.html      -> Galeri foto
+    pencapaian.html  -> Pencapaian
+    playlist.html    -> Playlist Spotify 44 orang
+    kontak.html      -> Kontak
+
+  1. WARNA & FONT  -> assets/css/style.css bagian ":root"
+  2. FOTO GALERI   -> taruh di assets/img/gallery/, daftarkan di
+                      assets/js/script.js (GALLERY_PHOTOS)
+  3. FOTO DI TV    -> taruh di assets/img/hero/, daftarkan di
+                      assets/js/script.js (HERO_PHOTOS)
+  4. PLAYLIST      -> isi SPOTIFY_EMBED_URL & PLAYLIST_MEMBERS di
+                      assets/js/script.js
+  5. SUARA KLIK    -> dibuat otomatis lewat kode (Web Audio API),
+                      tidak perlu upload file audio apa pun. Bisa
+                      dimatikan lewat tombol 🔊 di navbar.
+  6. TEKS          -> semua teks placeholder ditandai [EDIT DI SINI]
+  ====================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">FONCY <span>FUNTASTIC</span></a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index">Beranda</a>
+      <a href="tentang.html" data-page="tentang">Tentang</a>
+      <a href="galeri.html" data-page="galeri">Galeri</a>
+      <a href="pencapaian.html" data-page="pencapaian">Pencapaian</a>
+      <a href="playlist.html" data-page="playlist">Playlist</a>
+      <a href="kontak.html" data-page="kontak">Kontak</a>
+    </nav>
+    <div class="nav-right">
+      <button class="sound-toggle" id="soundToggle" aria-label="Aktif/nonaktifkan suara">🔊</button>
+      <button class="burger" id="burgerBtn" aria-label="Buka menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
+  <div class="hero-stars"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
+
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <p class="eyebrow">// KELAS PIXEL 8-BIT</p>
+      <h1>FONCY <br> FUNTASTIC<span class="blink">_</span></h1>
+      <p class="hero-desc">
+        [EDIT DI SINI] Tulis deskripsi singkat tentang kelas / komunitas kamu di sini.
+        Contoh: kumpulan cerita, karya, dan momen seru dari anggota kelas.
+      </p>
+      <div class="hero-btns">
+        <a href="galeri.html" class="btn btn-gold pixel-corners">Lihat Galeri</a>
+        <a href="kontak.html" class="btn btn-outline pixel-corners">Gabung Kelas</a>
+      </div>
+    </div>
+
+    <!-- TV PIXEL — elemen andalan halaman ini -->
+    <div class="tv-wrap">
+      <div class="tv-antenna">
+        <span class="a-left"></span>
+        <span class="a-right"></span>
+      </div>
+      <div class="tv pixel-corners">
+        <div class="tv-face">
+          <div class="tv-screen-frame pixel-corners">
+            <div class="tv-screen" id="heroScreen">
+              <div class="tv-noise" id="heroPlaceholder">
+                <p class="no-signal">NO SIGNAL</p>
+                <p class="hint">taruh foto di<br>assets/img/hero/</p>
+              </div>
+            </div>
+            <div class="scanline"></div>
+          </div>
+          <div class="tv-side-panel">
+            <div class="knob"></div>
+            <div class="knob small"></div>
+            <div class="brand">XI-F1</div>
+          </div>
+        </div>
+        <div class="tv-bottom">
+          <div class="speaker-grille"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="switch"></div>
+        </div>
+      </div>
+      <div class="tv-legs"><span></span><span></span></div>
+    </div>
+  </div>
+
+  <div class="ground"></div>
+</section>
+
+<!-- ============ TEASER TENTANG ============ -->
+<section class="section">
+  <h2 class="section-title reveal">Tentang Kelas <span class="mush">🍄</span></h2>
+  <div class="dialog-box pixel-corners reveal">
+    <p>[EDIT DI SINI] Cuplikan singkat cerita kelas kamu. Klik tombol di bawah untuk baca cerita lengkapnya.</p>
+  </div>
+  <div style="text-align:center;">
+    <a href="tentang.html" class="btn btn-outline pixel-corners reveal">Baca Selengkapnya</a>
+  </div>
+</section>
+
+<!-- ============ TEASER GALERI ============ -->
+<section class="section">
+  <h2 class="section-title reveal">Galeri Foto <span class="mush">📷</span></h2>
+  <p class="section-sub reveal">Kumpulan momen seru kelas ada di halaman Galeri.</p>
+  <div style="text-align:center;">
+    <a href="galeri.html" class="btn btn-gold pixel-corners reveal">Buka Galeri</a>
+  </div>
+</section>
+
+<!-- ============ TEASER PENCAPAIAN & PLAYLIST ============ -->
+<section class="section">
+  <div class="info-cards">
+    <div class="info-card pixel-corners reveal">
+      <div class="icon">🏆</div>
+      <h3>Pencapaian</h3>
+      <p>Lihat pencapaian & penghargaan kelas.</p>
+      <br>
+      <a href="pencapaian.html" class="btn btn-outline pixel-corners">Lihat</a>
+    </div>
+    <div class="info-card pixel-corners reveal">
+      <div class="icon">🎵</div>
+      <h3>Playlist Kelas</h3>
+      <p>44 lagu pilihan dari 44 anggota kelas.</p>
+      <br>
+      <a href="playlist.html" class="btn btn-outline pixel-corners">Dengarkan</a>
+    </div>
+    <div class="info-card pixel-corners reveal">
+      <div class="icon">🧰</div>
+      <h3>Kontak</h3>
+      <p>Mau gabung atau hubungi kelas ini?</p>
+      <br>
+      <a href="kontak.html" class="btn btn-outline pixel-corners">Hubungi</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer-mini">
+  <div class="mini-links">
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="pencapaian.html">Pencapaian</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <p class="copyright">© 2026 Foncy Funtastic. Dibuat dengan 💛 gaya 8-bit.</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
