@@ -30,7 +30,10 @@ const GALLERY_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
 
 // ---------- FOTO LAYAR TV (BERANDA) ----------
 const HERO_PHOTOS = [
-  // "contoh-tv.jpg",
+   "fototv-1.jpg",
+   "fototv-2.jpg",
+   "fototv-3.jpg",
+   "fototv-4.jpg",
 ];
 const HERO_PATH = "assets/img/hero/";
 const HERO_SLIDE_INTERVAL = 3500;
@@ -43,7 +46,7 @@ const SPOTIFY_EMBED_URL = "https://open.spotify.com/embed/playlist/3kk7EAkPWybxG
 // otomatis muncul kotak placeholder. Link tombol Follow diedit langsung
 // di media.html (cari href="#" pada .social-follow-row).
 const INSTAGRAM_EMBED_URL = ""; // contoh: "https://www.instagram.com/p/XXXXXXXXXXX/"
-const TIKTOK_EMBED_URL = ""; // contoh: "https://www.tiktok.com/@username/video/1234567890123456789"
+const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_"; // contoh: "https://www.tiktok.com/@username/video/1234567890123456789"
 
 // ---------- ANGGOTA KELAS (44 orang) ----------
 // Edit name / ig / photo satu-satu. photo dikosongkan "" kalau belum ada.
