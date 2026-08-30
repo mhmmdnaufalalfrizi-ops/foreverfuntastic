@@ -39,7 +39,7 @@ const HERO_PATH = "assets/img/hero/";
 const HERO_SLIDE_INTERVAL = 3500;
 
 // ---------- PLAYLIST SPOTIFY ----------
-const SPOTIFY_EMBED_URL = "https://open.spotify.com/playlist/3kk7EAkPWybxG5kU7ad5Fs?si=Z65TGkSeSuy8WQ0xcdnCpg&utm_source=copy-link&pt=f05dc5764364e1fd38a16b22a8d4af61"; // tempel link embed di sini
+const SPOTIFY_EMBED_URL = "https://open.spotify.com/embed/playlist/3kk7EAkPWybxG5kU7ad5Fs"; // tempel link embed di sini
 
 // ---------- ANGGOTA KELAS (44 orang) ----------
 // Edit name / ig / photo satu-satu. photo dikosongkan "" kalau belum ada.
