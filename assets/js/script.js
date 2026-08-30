@@ -155,7 +155,7 @@ function renderMedia() {
   if (!embedWrap) return;
   if (SPOTIFY_EMBED_URL) {
     embedWrap.innerHTML = `
-      <iframe src="${SPOTIFY_EMBED_URL}" height="352" frameborder="0"
+      <iframe src="${https://open.spotify.com/playlist/3kk7EAkPWybxG5kU7ad5Fs?si=Z65TGkSeSuy8WQ0xcdnCpg&utm_source=copy-link&pt=f05dc5764364e1fd38a16b22a8d4af61}" height="352" frameborder="0"
         allowfullscreen loading="lazy"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>`;
