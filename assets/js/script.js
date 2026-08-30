@@ -28,7 +28,6 @@ const GALLERY_PHOTOS = [
    { file: "4.jpg", caption: "Ganti dengan captionmu" },
    { file: "5.jpg", caption: "Ganti dengan captionmu" },
    { file: "6.jpg", caption: "Ganti dengan captionmu" },
-   { file: "7.jpg", caption: "Ganti dengan captionmu" },
    { file: "8.jpg", caption: "Ganti dengan captionmu" },
    { file: "9.jpg", caption: "Ganti dengan captionmu" },
    { file: "10.jpg", caption: "Ganti dengan captionmu" },
