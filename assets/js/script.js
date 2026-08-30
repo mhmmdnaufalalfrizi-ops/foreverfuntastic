@@ -52,7 +52,8 @@ const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_"; // contoh: "htt
 // Edit name / ig / photo satu-satu. photo dikosongkan "" kalau belum ada.
 const MEMBERS_PATH = "assets/img/members/";
 const MEMBERS = Array.from({ length: 44 }, (_, i) => ({
-  name: `Nama ${i + 1}`,
+  name: `Agni Malihatun Nafisah ${i + 1}`,   
+   name: `Agni Malihatun Nafisah ${i + 1}`,
   ig: "@username",
   photo: "", // contoh: "anggota01.jpg"
 }));
