@@ -29,8 +29,8 @@ const GALLERY_PLACEHOLDER_COUNT = 18; // jumlah kotak placeholder kalau galeri m
 const GALLERY_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
 
 // ---------- FOTO LAYAR TV (BERANDA) ----------
-const  = [
-  // "fototv-1.jpg",
+const HERO_PHOTOS = [
+   "fototv-1.jpg",
 ];
 const HERO_PATH = "assets/img/hero/";
 const HERO_SLIDE_INTERVAL = 3500;
