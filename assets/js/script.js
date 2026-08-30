@@ -22,7 +22,18 @@
 
 // ---------- FOTO GALERI ----------
 const GALLERY_PHOTOS = [
-  // { file: "contoh1.jpg", caption: "Ganti dengan captionmu" },
+   { file: "1.jpg", caption: "Ganti dengan captionmu" },
+   { file: "2.jpg", caption: "Ganti dengan captionmu" },
+   { file: "3.jpg", caption: "Ganti dengan captionmu" },
+   { file: "4.jpg", caption: "Ganti dengan captionmu" },
+   { file: "5.jpg", caption: "Ganti dengan captionmu" },
+   { file: "6.jpg", caption: "Ganti dengan captionmu" },
+   { file: "7.jpg", caption: "Ganti dengan captionmu" },
+   { file: "8.jpg", caption: "Ganti dengan captionmu" },
+   { file: "9.jpg", caption: "Ganti dengan captionmu" },
+   { file: "10.jpg", caption: "Ganti dengan captionmu" },
+   { file: "11.jpg", caption: "Ganti dengan captionmu" },
+   { file: "12.jpg", caption: "Ganti dengan captionmu" },
 ];
 const GALLERY_PATH = "assets/img/gallery/";
 const GALLERY_PLACEHOLDER_COUNT = 18; // jumlah kotak placeholder kalau galeri masih kosong
