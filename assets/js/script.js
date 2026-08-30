@@ -30,7 +30,10 @@ const GALLERY_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
 
 // ---------- FOTO LAYAR TV (BERANDA) ----------
 const HERO_PHOTOS = [
-  // "contoh-tv.jpg",
+  "fototv-1.jpg",
+   "fototv-2.jpg",
+   "fototv-3.jpg",
+   "fototv-4.jpg",
 ];
 const HERO_PATH = "assets/img/hero/";
 const HERO_SLIDE_INTERVAL = 3500;
@@ -42,8 +45,8 @@ const SPOTIFY_EMBED_URL = "https://open.spotify.com/embed/playlist/3kk7EAkPWybxG
 // Kosongkan "" kalau belum mau menampilkan postingan tertentu — nanti
 // otomatis muncul kotak placeholder. Link tombol Follow diedit langsung
 // di media.html (cari href="#" pada .social-follow-row).
-const INSTAGRAM_EMBED_URL = ""; // isi link 1 POSTINGAN/REEL (bukan link profil), contoh: "https://www.instagram.com/p/XXXXXXXXXXX/"
-const TIKTOK_EMBED_URL = "https://vt.tiktok.com/ZSVWofjaC/"; // link tujuan saat gambar/tombol TikTok diklik
+const INSTAGRAM_EMBED_URL = "https://www.instagram.com/foreverexp1?igsi=bW1tNHNpdWhtMmw1"; // isi link 1 POSTINGAN/REEL (bukan link profil), contoh: "https://www.instagram.com/p/XXXXXXXXXXX/"
+const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_?_r=1&_t=ZS-99IuSgvUqrE; // link tujuan saat gambar/tombol TikTok diklik
 
 // Screenshot profil TikTok (cara paling stabil, embed TikTok sering gagal).
 // 1. Screenshot halaman profil TikTok kamu, simpan sebagai .jpg/.png
