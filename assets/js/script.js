@@ -53,8 +53,8 @@ const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_"; // contoh: "htt
 const MEMBERS_PATH = "assets/img/members/";
 const MEMBERS = Array.from({ length: 44 }, (_, i) => ({
   name: `Agni Malihatun Nafisah ${i + 1}`,   
-   name: `Agni Malihatun Nafisah ${i + 1}`,
-  ig: "@username",
+   name: `Aira  Agusnia Kamilah ${i + 1}`,
+  ig: "@aira",
   photo: "", // contoh: "anggota01.jpg"
 }));
 const MEMBERS_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
