@@ -49,15 +49,57 @@ const INSTAGRAM_EMBED_URL = "https://www.instagram.com/foreverexp1?igsi=bW1tNHNp
 const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_"; // contoh: "https://www.tiktok.com/@username/video/1234567890123456789"
 
 // ---------- ANGGOTA KELAS (44 orang) ----------
-// Edit name / ig / photo satu-satu. photo dikosongkan "" kalau belum ada.
+// Edit SATU-SATU baris di bawah ini: name = nama asli, ig = username
+// instagram (pakai @), photo = nama file foto di assets/img/members/
+// (kosongkan "" kalau foto belum ada, nanti muncul avatar placeholder).
+// PENTING: setiap orang punya barisnya sendiri, jadi aman diedit
+// satu-satu tanpa mempengaruhi nama anggota lain.
 const MEMBERS_PATH = "assets/img/members/";
-const MEMBERS = Array.from({ length: 44 }, (_, i) => ({
-  name: `Agni Malihatun Nafisah ${i + 1}`,   
-   name: `Aira  Agusnia Kamilah ${i + 1}`,
-  ig: "@aira",
-  photo: "", // contoh: "anggota01.jpg"
-}));
-const MEMBERS_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
+const MEMBERS = [
+  { name: "Agni Malihatun Nafisah", ig: "@username1", photo: "" },
+  { name: "Nama 2", ig: "@username2", photo: "" },
+  { name: "Nama 3", ig: "@username3", photo: "" },
+  { name: "Nama 4", ig: "@username4", photo: "" },
+  { name: "Nama 5", ig: "@username5", photo: "" },
+  { name: "Nama 6", ig: "@username6", photo: "" },
+  { name: "Nama 7", ig: "@username7", photo: "" },
+  { name: "Nama 8", ig: "@username8", photo: "" },
+  { name: "Nama 9", ig: "@username9", photo: "" },
+  { name: "Nama 10", ig: "@username10", photo: "" },
+  { name: "Nama 11", ig: "@username11", photo: "" },
+  { name: "Nama 12", ig: "@username12", photo: "" },
+  { name: "Nama 13", ig: "@username13", photo: "" },
+  { name: "Nama 14", ig: "@username14", photo: "" },
+  { name: "Nama 15", ig: "@username15", photo: "" },
+  { name: "Nama 16", ig: "@username16", photo: "" },
+  { name: "Nama 17", ig: "@username17", photo: "" },
+  { name: "Nama 18", ig: "@username18", photo: "" },
+  { name: "Nama 19", ig: "@username19", photo: "" },
+  { name: "Nama 20", ig: "@username20", photo: "" },
+  { name: "Nama 21", ig: "@username21", photo: "" },
+  { name: "Nama 22", ig: "@username22", photo: "" },
+  { name: "Nama 23", ig: "@username23", photo: "" },
+  { name: "Nama 24", ig: "@username24", photo: "" },
+  { name: "Nama 25", ig: "@username25", photo: "" },
+  { name: "Nama 26", ig: "@username26", photo: "" },
+  { name: "Nama 27", ig: "@username27", photo: "" },
+  { name: "Nama 28", ig: "@username28", photo: "" },
+  { name: "Nama 29", ig: "@username29", photo: "" },
+  { name: "Nama 30", ig: "@username30", photo: "" },
+  { name: "Nama 31", ig: "@username31", photo: "" },
+  { name: "Nama 32", ig: "@username32", photo: "" },
+  { name: "Nama 33", ig: "@username33", photo: "" },
+  { name: "Nama 34", ig: "@username34", photo: "" },
+  { name: "Nama 35", ig: "@username35", photo: "" },
+  { name: "Nama 36", ig: "@username36", photo: "" },
+  { name: "Nama 37", ig: "@username37", photo: "" },
+  { name: "Nama 38", ig: "@username38", photo: "" },
+  { name: "Nama 39", ig: "@username39", photo: "" },
+  { name: "Nama 40", ig: "@username40", photo: "" },
+  { name: "Nama 41", ig: "@username41", photo: "" },
+  { name: "Nama 42", ig: "@username42", photo: "" },
+  { name: "Nama 43", ig: "@username43", photo: "" },
+  { name: "Nama 44", ig: "@username44", photo: "" },
 
 // ---------- URUTAN HALAMAN (untuk tombol Sebelumnya / Selanjutnya) ----------
 const PAGE_ORDER = [
