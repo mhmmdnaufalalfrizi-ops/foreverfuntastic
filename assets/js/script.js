@@ -29,8 +29,8 @@ const GALLERY_PLACEHOLDER_COUNT = 18; // jumlah kotak placeholder kalau galeri m
 const GALLERY_PER_PAGE = 9; // 3 kolom x 3 baris per halaman
 
 // ---------- FOTO LAYAR TV (BERANDA) ----------
-const HERO_PHOTOS = [
-  // "contoh-tv.jpg",
+const  = [
+  "fototv-1.jpg",
 ];
 const HERO_PATH = "assets/img/hero/";
 const HERO_SLIDE_INTERVAL = 3500;
@@ -129,7 +129,7 @@ function renderHeroScreen() {
   const screen = document.getElementById("heroScreen");
   const placeholder = document.getElementById("heroPlaceholder");
   if (!screen) return;
-  if (HERO_PHOTOS.length === 0) return;
+  if (.length === 0) return;
 
   if (placeholder) placeholder.remove();
   const img = document.createElement("img");
