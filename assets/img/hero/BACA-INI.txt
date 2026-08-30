@@ -1,0 +1,12 @@
+Taruh 1 atau beberapa foto/gif di sini untuk ditampilkan di layar TV
+pada bagian atas (hero) halaman.
+
+Lalu daftarkan nama filenya di assets/js/script.js, bagian HERO_PHOTOS.
+
+Contoh:
+const HERO_PHOTOS = [
+  "foto-tv-1.jpg",
+  "foto-tv-2.jpg",
+];
+
+Kalau lebih dari 1 foto, layar TV akan otomatis bergantian (slideshow).

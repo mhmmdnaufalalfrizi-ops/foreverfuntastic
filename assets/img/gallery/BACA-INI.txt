@@ -1,0 +1,25 @@
+CARA UPLOAD FOTO GALERI
+========================
+
+1. Copy/paste file foto kamu (.jpg, .png, .webp) ke dalam folder ini
+   (assets/img/gallery/).
+
+2. Buka file: assets/js/script.js
+
+3. Cari bagian paling atas bertuliskan GALLERY_PHOTOS, lalu tambahkan
+   baris untuk tiap foto, contoh:
+
+   const GALLERY_PHOTOS = [
+     { file: "acara-kelas.jpg", caption: "Acara kelas 2026" },
+     { file: "kumpul-bareng.jpg", caption: "Kumpul bareng" },
+   ];
+
+4. Simpan, lalu buka/refresh index.html di browser. Foto akan otomatis
+   muncul di section Galeri.
+
+Catatan:
+- Nama file HARUS sama persis (huruf besar/kecil ikut dihitung).
+- Kalau daftar dikosongkan seperti awal, akan muncul kotak placeholder
+  "belum diupload" — jadi website tetap aman dibuka meski belum ada foto.
+- Foto untuk layar TV di bagian atas (hero) caranya sama, tapi filenya
+  ditaruh di assets/img/hero/ dan didaftarkan di HERO_PHOTOS.

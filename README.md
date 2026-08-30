@@ -1,87 +1,103 @@
-# Foncy Funtastic — Website Kelas (tema 8-bit, multi-halaman)
+# Foncy Funtastic — Website Kelas (tema 8-bit, v3)
 
-Template website statis (HTML/CSS/JS murni, tanpa perlu install apa pun)
-dengan tema pixel/8-bit: langit biru, rumput hijau, TV retro, bintang emas,
-peti kayu. Sekarang terdiri dari beberapa halaman terpisah (bukan satu
-halaman scroll), lengkap dengan animasi dan sound effect 8-bit.
+Template statis (HTML/CSS/JS murni). Tab situs: **Home, Tentang, Media,
+Struktur, Anggota, Gallery, Prestasi** (+ Kontak lewat footer).
 
 ## Struktur folder
 
 ```
 kelas-website/
-├── index.html          <- Beranda
-├── tentang.html        <- Tentang
-├── galeri.html         <- Galeri foto
-├── pencapaian.html     <- Pencapaian
-├── playlist.html       <- Playlist Spotify (44 anggota)
-├── kontak.html         <- Kontak
+├── index.html          <- Home
+├── tentang.html        <- Tentang (+ banner statistik siswa)
+├── media.html          <- Media (playlist Spotify 44 orang)
+├── struktur.html       <- Struktur organisasi kelas (mentahan)
+├── anggota.html        <- Anggota kelas (44 orang, 3 kolom + paginasi)
+├── galeri.html          <- Gallery foto (3 kolom + paginasi)
+├── prestasi.html        <- Prestasi
+├── kontak.html          <- Kontak
 └── assets/
-    ├── css/style.css    <- semua warna, gaya & animasi (edit di sini)
-    ├── js/script.js     <- konfigurasi foto, playlist, sound effect
+    ├── css/style.css
+    ├── js/script.js     <- SEMUA konfigurasi ada di sini (lihat di bawah)
     └── img/
-        ├── gallery/      <- taruh foto galeri di sini
-        └── hero/         <- taruh foto/gif untuk layar TV di Beranda
+        ├── gallery/       <- foto galeri
+        ├── hero/          <- foto/gif layar TV di Home
+        ├── members/       <- foto anggota kelas
+        └── class-photo.jpg <- foto latar banner statistik (taruh sendiri)
 ```
 
 ## Cara menjalankan
 
-Buka `index.html` langsung di browser (double-click), atau jalankan
-local server (opsional):
-
+Buka `index.html` di browser, atau jalankan server lokal:
 ```
-cd kelas-website
-python3 -m http.server 8000
+cd kelas-website && python3 -m http.server 8000
 ```
 
-lalu buka `http://localhost:8000`.
+## Statistik siswa (44 Students / 32 Girls / 12 Boys)
 
-## Cara upload foto
+Ada di halaman **Tentang**, dalam kotak persegi panjang dengan foto
+latar. Cara pakai:
+1. Taruh foto bareng sekelas di `assets/img/class-photo.jpg`.
+2. Edit angka 44/32/12 langsung di `tentang.html` (cari `.stats-row`).
 
-1. **Foto galeri**: copy ke `assets/img/gallery/`, daftarkan nama filenya
-   di `assets/js/script.js` pada `GALLERY_PHOTOS`.
-2. **Foto layar TV (Beranda)**: copy ke `assets/img/hero/`, daftarkan di
-   `HERO_PHOTOS` pada file yang sama.
+## Gallery & Anggota Kelas (3 kolom, diperbesar, dengan paginasi)
 
-Selama kedua daftar itu kosong, halaman otomatis menampilkan placeholder
-("belum diupload" / "NO SIGNAL").
+Keduanya pakai layout yang sama:
+- **Layar besar (PC/tablet, lebar ≥1000px):** 3 kartu berdampingan.
+- **HP (Android/iOS, layar sempit):** otomatis tersusun 1 kolom ke bawah.
+- Karena isinya banyak (44 anggota, atau puluhan foto), ditampilkan
+  per halaman (bukan sekaligus ke bawah) — ada tombol nomor halaman
+  plus panah ‹ › di bagian bawah untuk pindah halaman.
 
-## Cara isi Playlist Spotify (44 orang)
+**Foto galeri**: copy ke `assets/img/gallery/`, daftarkan di
+`GALLERY_PHOTOS` (assets/js/script.js).
 
-1. Buka playlist di Spotify → tombol titik tiga (•••) → Share →
-   Embed playlist → salin link di dalam atribut `src="..."`.
-2. Tempel link itu ke `SPOTIFY_EMBED_URL` di `assets/js/script.js`.
-3. Edit array `PLAYLIST_MEMBERS` — ganti nama & judul lagu tiap
-   anggota (defaultnya sudah tersedia 44 slot kosong yang bisa
-   langsung diisi satu per satu).
+**Anggota kelas**: copy foto ke `assets/img/members/`, lalu edit array
+`MEMBERS` di `assets/js/script.js` — isi `name`, `ig` (username
+Instagram), dan `photo` (nama file) untuk tiap orang. Kalau foto belum
+ada, biarkan `photo: ""` — otomatis muncul avatar placeholder.
+
+## Struktur Kelas
+
+Halaman `struktur.html` berisi bagan organisasi kosong (Wali Kelas →
+Ketua/Wakil → Sekretaris/Bendahara → Seksi-seksi). Tinggal ganti teks
+`[EDIT DI SINI]` di tiap kotak dengan nama asli. Mau tambah/kurangi
+jabatan, tinggal copy atau hapus blok `.org-box` di HTML.
+
+## Playlist Spotify (halaman Media)
+
+1. Spotify → buka playlist → (•••) → Share → Embed playlist → salin
+   link di dalam `src="..."`.
+2. Tempel ke `SPOTIFY_EMBED_URL` di `assets/js/script.js`.
+
+## Navigasi Sebelumnya / Selanjutnya
+
+Di bagian bawah tiap halaman (sebelum footer) ada tombol "← Sebelumnya"
+dan "Selanjutnya →" yang otomatis mengarah ke tab berikutnya/sebelumnya
+sesuai urutan: Home → Tentang → Media → Struktur → Anggota → Gallery →
+Prestasi → Kontak. Urutan ini diatur di `PAGE_ORDER` pada
+`assets/js/script.js`, kalau mau diubah urutannya tinggal edit array itu.
 
 ## Sound effect 8-bit
 
-Semua bunyi klik/hover dibuat langsung lewat kode (Web Audio API,
-nada kotak/"square wave" khas chiptune) — **tidak perlu upload file
-audio apa pun**, jadi tidak ada masalah hak cipta. Pengunjung bisa
-mematikan suara lewat tombol 🔊 di pojok kanan navbar; pilihannya
-disimpan otomatis di browser mereka.
+Bunyi klik/hover dibuat langsung lewat kode (Web Audio API, nada
+square-wave khas chiptune) — tidak perlu upload file audio. Tombol 🔊
+di navbar untuk mematikan/menghidupkan suara (tersimpan di browser).
 
 ## Animasi
 
-Hampir semua elemen sudah bergerak halus: awan melayang, bintang
-berkedip, TV mengambang, tombol memantul saat hover, kartu-kartu
-muncul dengan efek "reveal" saat discroll, dan lainnya. Kalau ingin
-mengurangi/menambah animasi, cari bagian `@keyframes` dan
-`animation:` di `assets/css/style.css`.
+Hampir semua elemen bergerak: awan melayang, bintang berkedip, TV
+mengambang, kartu terangkat saat hover, dan elemen muncul dengan efek
+"reveal" saat discroll. Cari `@keyframes` / `animation:` di
+`assets/css/style.css` untuk menambah/mengurangi.
 
-## Cara ganti warna / font
+## Ganti warna, font, dan teks
 
-Semua warna terpusat di bagian atas `assets/css/style.css`, dalam
-blok `:root { ... }`.
+- Warna & font: `assets/css/style.css`, bagian `:root { ... }`.
+- Teks: cari `[EDIT DI SINI]` di tiap file HTML.
 
-## Cara ganti teks
+## Tambah/hapus tab baru
 
-Semua teks contoh ditandai `[EDIT DI SINI]` di dalam file HTML — cari
-lewat Ctrl+F / Cmd+F untuk menemukan semuanya di tiap halaman.
-
-## Cara tambah/hapus halaman (tab) baru
-
-Copy salah satu file halaman (misalnya `tentang.html`), ganti isinya,
-lalu tambahkan link ke halaman baru itu pada bagian `<nav class="nav-links">`
-di SEMUA file HTML (supaya muncul konsisten di semua tab navigasi).
+Copy salah satu file halaman, ganti isinya, lalu tambahkan link baru
+ke `<nav class="nav-links">` di **SEMUA** file HTML supaya tab tampil
+konsisten di semua halaman. Jangan lupa tambahkan juga ke `PAGE_ORDER`
+di `assets/js/script.js` supaya ikut masuk urutan Sebelumnya/Selanjutnya.
