@@ -32,8 +32,8 @@ const GALLERY_PHOTOS = [
    { file: "8.jpg", caption: "Ganti dengan captionmu" },
    { file: "9.jpg", caption: "Ganti dengan captionmu" },
    { file: "10.jpg", caption: "Ganti dengan captionmu" },
-   { file: "11.jpg", caption: "Ganti dengan captionmu" },
-   { file: "12.jpg", caption: "Ganti dengan captionmu" },
+   { file: "11.jpg", caption: "" },
+   { file: "12.jpg", caption: "" },
 ];
 const GALLERY_PATH = "assets/img/gallery/";
 const GALLERY_PLACEHOLDER_COUNT = 18; // jumlah kotak placeholder kalau galeri masih kosong
