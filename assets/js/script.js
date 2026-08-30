@@ -45,8 +45,8 @@ const SPOTIFY_EMBED_URL = "https://open.spotify.com/embed/playlist/3kk7EAkPWybxG
 // Kosongkan "" kalau belum mau menampilkan postingan tertentu — nanti
 // otomatis muncul kotak placeholder. Link tombol Follow diedit langsung
 // di media.html (cari href="#" pada .social-follow-row).
-const INSTAGRAM_EMBED_URL = ""; // contoh: "https://www.instagram.com/p/XXXXXXXXXXX/"
-const TIKTOK_EMBED_URL = "https://www.tiktok.com/@foreverexp1_"; // contoh: "https://www.tiktok.com/@username/video/1234567890123456789"
+const INSTAGRAM_EMBED_URL = "https://www.instagram.com/foreverexp1?igsi=bW1tNHNpdWhtMmw1"; // contoh: "https://www.instagram.com/p/XXXXXXXXXXX/"
+const TIKTOK_EMBED_URL = "https://vt.tiktok.com/ZSVWofjaC/"; // contoh: "https://www.tiktok.com/@username/video/1234567890123456789"
 
 // ---------- ANGGOTA KELAS (44 orang) ----------
 // Edit name / ig / photo satu-satu. photo dikosongkan "" kalau belum ada.
